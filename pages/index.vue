@@ -1,67 +1,58 @@
 <template>
-  <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">fecolumbus</h1>
-      <h2 class="subtitle">Front End Columbus website</h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green"
-          >Documentation</a
-        >
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-          >GitHub</a
-        >
-      </div>
+  <main class="max-w-xl mx-auto">
+    <div class="flex flex-row">
+      <section class="max-w-sm">
+        <div class="text-center mb-8">
+          <img
+            src="logo.svg"
+            alt="Front end columbus logo, two brackets with FE between them"
+          />
+        </div>
+        <p class="leading-normal text-lg mb-8" style="color: #616161;">
+          This group is primarily for front end developers with a passion for
+          UX/UI, CSS/Sass, JavaScript, HTML and web browser based development.
+        </p>
+        <div class="flex flex-row">
+          <a href="/" class="ghost ghost-red button button-primary">
+            Present
+          </a>
+          <a href="/" class="button button-secondary">
+            Sponsor
+          </a>
+        </div>
+      </section>
     </div>
-  </section>
+  </main>
 </template>
-<script>
-import Logo from '~/components/Logo.vue'
 
-export default {
-  components: {
-    Logo
-  }
+<style scoped lang="postcss">
+.button {
+  @apply uppercase no-underline px-8 py-3 font-semibold text-xl relative mr-12;
+  transition: all 0.2s;
 }
-</script>
-
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
+.button-primary {
+  @apply text-white;
+  background: #ffb99b;
 }
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.button-secondary {
+  @apply border-2;
+  color: #ffb99b;
+  border-color: #ffb99b;
 }
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.button-secondary:hover {
+  @apply text-white;
+  background: #ffb99b;
 }
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.ghost::before {
+  @apply absolute pin-t pin-l ml-1 mt-1 w-full h-full;
+  content: '';
+  z-index: -1;
+  transition: all 0.2s;
 }
-
-.links {
-  padding-top: 15px;
+.ghost-red::before {
+  background: #ffddcf;
+}
+.ghost:hover::before {
+  transform: translateX(+2px) translateY(+2px);
 }
 </style>
