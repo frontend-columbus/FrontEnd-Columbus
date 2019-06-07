@@ -1,7 +1,7 @@
 <template>
   <header
     role="banner"
-    class="py-12 md:py-8 lg:px-0 md:px-6 px-0 max-w-xl mx-auto md:text-left text-center w-screen"
+    class="py-12 md:py-8 lg:px-0 md:px-6 px-0 max-w-xl mx-auto md:text-left text-center w-screen mb-32"
   >
     <div>
       <a
