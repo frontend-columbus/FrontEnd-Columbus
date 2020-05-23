@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.0.0",
+    "luxon": "^1.24.1",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
