@@ -1,6 +1,10 @@
-# fecbus
+# Front End Columbus
 
-> Front End Columbus Website
+Hey there! This is the website for the Columbus based Front End developer community. 
+
+## Adding job postings
+
+To submit a job posting, please create a Markdown file in `/content/jobs` with the details of position. See other job postings as an example. Create a pull request to have the posting added to the website!
 
 ## Build Setup
 
