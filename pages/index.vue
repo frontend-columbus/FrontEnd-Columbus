@@ -1,30 +1,14 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        fecbus
-      </h1>
-      <h2 class="subtitle">
-        Front End Columbus Website
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div class="py-6 md:py-16">
+    <header class="flex flex-col items-center">
+      <!-- <logo /> -->
+      <h1 class="font-extrabold text-4xl md:text-5xl uppercase tracking-wider text-center">Front End Columbus</h1>
+      <div class="py-4">
+        <p
+          class="max-w-lg text-center text-lg font-medium leading-relaxed text-gray-600 tracking-wide"
+        >Columbus based Front End development community, meetup and more.</p>
       </div>
-    </div>
+    </header>
   </div>
 </template>
 
@@ -38,40 +22,11 @@ export default {
 }
 </script>
 
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+<style scoped>
+h1 {
+  background: linear-gradient(114.63deg, #FFB99B 47.46%, #FFCCB6 76.87%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
 }
 </style>
