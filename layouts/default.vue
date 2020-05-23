@@ -1,5 +1,5 @@
 <template>
-  <div class="container px-12 mx-auto">
+  <div class="max-w-5xl px-12 mx-auto">
     <nav class="w-full justify-start items-center flex flex-col md:flex-row py-6">
       <logo width="80" />
       <ul class="flex flex-row px-10 overflow-x-auto">
