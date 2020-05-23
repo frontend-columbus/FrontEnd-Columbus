@@ -4,7 +4,7 @@
       <logo width="80" />
       <ul class="flex flex-row px-10 overflow-x-auto">
         <li v-for="link in navigation" :key="link" class="text-lg font-semibold text-gray-700 hover:text-primary px-4 lowercase">
-          <nuxt-link to="link.href">
+          <nuxt-link :to="link.href">
             {{ link.label }}
           </nuxt-link>
         </li>
@@ -33,6 +33,11 @@ export default {
           href: '/events'
         }
       ]
+    }
+  },
+  head() {
+    return {
+      title: 'Front End Columbus'
     }
   }
 }
