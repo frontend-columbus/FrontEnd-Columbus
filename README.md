@@ -1,6 +1,7 @@
-# Front End Columbus
 
-Hey there! This is the website for the Columbus based Front End developer community. 
+![Screenshot of website](fecbuslogo.png)
+
+> Hey there! This is the website for the Columbus based Front End developer community. 
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4a903690-26a3-4ecf-85d8-0373b834a931/deploy-status)](https://app.netlify.com/sites/nifty-pare-29e1ff/deploys)
 
