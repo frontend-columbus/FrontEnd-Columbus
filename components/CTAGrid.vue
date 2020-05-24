@@ -29,21 +29,21 @@ export default {
         {
           header: '-',
           subheader: 'upcoming events',
-          link: '/'
+          link: '/events'
         },
         {
           header: '-',
           subheader: 'community job postings',
-          link: '/'
+          link: '/jobs'
         },
         {
           header: '4',
           subheader: 'members in discord',
-          link: '/'
+          link: '/community'
         },
         {
           subheader: "we're looking for speakers!",
-          link: '/'
+          link: '/cfp'
         }
       ]
     }

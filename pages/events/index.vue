@@ -26,7 +26,7 @@ export default {
   },
   async asyncData({ $content }) {
     let events = await $content('events')
-      .only(['title', 'datetime', 'summary', 'rsvp', 'recording'])
+      .only(['slug', 'title', 'datetime', 'summary', 'rsvp', 'recording'])
       .fetch()
 
     events = events
