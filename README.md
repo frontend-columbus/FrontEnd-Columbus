@@ -14,6 +14,7 @@
 - [ ] Job details page
 - [ ] Discord signup link
 - [ ] CFP form
+- [ ] PR documentation and templates for job postings & events
 
 ## Adding job postings
 
