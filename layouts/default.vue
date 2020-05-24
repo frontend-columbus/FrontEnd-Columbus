@@ -35,6 +35,16 @@ export default {
           label: 'events',
           href: '/events',
           view: ['events', 'events-id']
+        },
+        {
+          label: 'community',
+          href: '/community',
+          view: 'community'
+        },
+        {
+          label: 'want to speak?',
+          href: '/cfp',
+          view: 'cfp'
         }
       ]
     }
