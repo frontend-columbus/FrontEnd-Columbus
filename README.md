@@ -7,9 +7,9 @@
 
 ## V1 To-Do
 - [x] Homepage
-- [ ] Dynamic homepage CTAs
+- [x] Dynamic homepage CTAs
 - [x] Event listing page
-- [ ] Event details page
+- [x] Event details page
 - [ ] Job post list
 - [ ] Job details page
 - [ ] Discord signup link
