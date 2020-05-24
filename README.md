@@ -5,6 +5,16 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4a903690-26a3-4ecf-85d8-0373b834a931/deploy-status)](https://app.netlify.com/sites/nifty-pare-29e1ff/deploys)
 
+## V1 To-Do
+- [x] Homepage
+- [ ] Dynamic homepage CTAs
+- [x] Event listing page
+- [ ] Event details page
+- [ ] Job post list
+- [ ] Job details page
+- [ ] Discord signup link
+- [ ] CFP form
+
 ## Adding job postings
 
 To submit a job posting, please create a Markdown file in `/content/jobs` with the details of position. See other job postings as an example. Create a pull request to have the posting added to the website!
