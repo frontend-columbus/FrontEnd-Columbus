@@ -12,7 +12,7 @@
           class="text-lg font-medium leading-relaxed text-gray-600 tracking-wide"
         >We accept talks of any skill level related to front end development or design. Not sure if your talk is a fit? Reach out to us anyway!</p>
         <div class="py-10">
-          <form name="cfp" netlify class="max-w-lg">
+          <form name="cfp" method="POST" data-netlify="true" class="max-w-lg">
             <p class="py-2">
               <label>
                 <div
