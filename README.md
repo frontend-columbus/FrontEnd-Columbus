@@ -12,7 +12,7 @@
 - [x] Event details page
 - [ ] Job post list
 - [ ] Job details page
-- [ ] Discord signup link
+- [x] Discord signup link
 - [ ] CFP form
 - [ ] PR documentation and templates for job postings & events
 
