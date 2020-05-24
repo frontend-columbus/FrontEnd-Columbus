@@ -1,9 +1,9 @@
 <template>
   <div class="py-2 md:py-2">
-    <div class="flex flex-row items-center max-w-full pb-4">
+    <div class="flex flex-col md:flex-row items-center max-w-full pb-4">
       <nuxt-link
         to="/events"
-        class="font-semibold text-gray-700 py-1 mr-12 hover:text-primary flex flex-row items-center"
+        class="font-semibold text-gray-700 py-1 md:mr-12 hover:text-primary flex flex-row items-center my-2 md:my-0"
       >
         <span v-html="feather.icons['arrow-left'].toSvg()" class="mr-2" />
         Back
@@ -11,12 +11,12 @@
       <a
         v-if="content.recording"
         :href="content.recording"
-        class="font-semibold border border-primary text-primary px-4 py-1 mr-4 hover:shadow"
+        class="font-semibold border border-primary text-primary px-4 py-1 md:mr-4 hover:shadow my-2 md:my-0"
       >Watch Recording</a>
       <a
         v-if="content.rsvp"
         :href="content.rsvp"
-        class="font-semibold bg-primary text-white px-4 py-1 mr-4 hover:shadow"
+        class="font-semibold bg-primary text-white px-4 py-1 md:mr-4 hover:shadow my-2 md:my-0"
       >RSVP</a>
     </div>
     <section class="max-w-3xl">
