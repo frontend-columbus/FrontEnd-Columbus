@@ -1,6 +1,10 @@
 <template>
   <div class="ctaGrid grid grid-cols-1 md:grid-cols-2 max-w-lg mx-auto gap-6 py-8">
-    <div class="border-4 justify-center border-gray-500 py-2 px-6 shadow relative flex justify-center items-center flex-col cursor-pointer ease-in transition duration-200 hover:shadow-lg" v-for="{ header, subheader, link} in squares" :key="subheader">
+    <div
+      class="border-4 justify-center border-gray-500 py-2 px-6 shadow relative flex justify-center items-center flex-col cursor-pointer ease-in transition duration-200 hover:shadow-lg"
+      v-for="{ header, subheader, link} in squares"
+      :key="subheader"
+    >
       <nuxt-link :to="link">
         <div
           class="absolute top-0 right-0 pt-2 pr-2 text-primary"
@@ -15,6 +19,7 @@
 
 <script>
 import feather from 'feather-icons'
+import { DateTime } from 'luxon'
 
 export default {
   data() {
@@ -22,17 +27,17 @@ export default {
       feather,
       squares: [
         {
-          header: '5',
+          header: '-',
           subheader: 'upcoming events',
           link: '/'
         },
         {
-          header: '10',
+          header: '-',
           subheader: 'community job postings',
           link: '/'
         },
         {
-          header: '5',
+          header: '4',
           subheader: 'members in discord',
           link: '/'
         },
@@ -41,6 +46,26 @@ export default {
           link: '/'
         }
       ]
+    }
+  },
+  mounted() {
+    this.setEventsCount()
+    this.setJobPostingsCount()
+  },
+  methods: {
+    async setEventsCount() {
+      const events = await this.$content('events').fetch()
+      const eventsCount = events.filter(event => {
+        const dateTime = new DateTime.fromString(event.datetime, 'y-M-d T')
+        return dateTime > new DateTime.local()
+      }).length
+
+      this.squares[0].header = events.length > 0 ? eventsCount : 0
+    },
+    async setJobPostingsCount() {
+      const jobPostings = await this.$content('jobs').fetch()
+
+      this.squares[1].header = jobPostings.length > 0 ? jobPostings.length : 0
     }
   }
 }
