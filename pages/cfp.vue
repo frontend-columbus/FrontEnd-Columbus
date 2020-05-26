@@ -12,13 +12,36 @@
           class="text-lg font-medium leading-relaxed text-gray-600 tracking-wide"
         >We accept talks of any skill level related to front end development or design. Not sure if your talk is a fit? Reach out to us anyway!</p>
         <div class="py-10">
-          <form name="cfp" method="POST" data-netlify="true" class="max-w-lg">
+          <form @submit.prevent="onSubmit" class="max-w-lg">
+            <p class="py-2">
+              <label>
+                <div class="text-base font-extrabold uppercase tracking-wide pb-2">Your name</div>
+                <input
+                  v-model="name"
+                  type="text"
+                  name="name"
+                  class="px-3 py-1 text-lg border border-gray-600 w-full"
+                />
+              </label>
+            </p>
+            <p class="py-2">
+              <label>
+                <div class="text-base font-extrabold uppercase tracking-wide pb-2">Your email</div>
+                <input
+                  v-model="email"
+                  type="email"
+                  name="email"
+                  class="px-3 py-1 text-lg border border-gray-600 w-full"
+                />
+              </label>
+            </p>
             <p class="py-2">
               <label>
                 <div
                   class="text-base font-extrabold uppercase tracking-wide pb-2"
                 >Presentation length</div>
                 <select
+                  v-model="session_length"
                   name="session_length"
                   class="px-3 py-1 text-lg border border-gray-600 w-full"
                   :options="lengthOptions"
@@ -35,6 +58,7 @@
               <label>
                 <div class="text-base font-extrabold uppercase tracking-wide pb-2">Title</div>
                 <input
+                  v-model="session_title"
                   type="text"
                   name="session_title"
                   class="px-3 py-1 text-lg border border-gray-600 w-full"
@@ -45,6 +69,7 @@
               <label>
                 <div class="text-base font-extrabold uppercase tracking-wide pb-2">Summary</div>
                 <textarea
+                  v-model="session_summary"
                   name="session_summary"
                   class="px-3 py-1 text-lg border border-gray-600 w-full"
                 />
@@ -67,6 +92,11 @@
 export default {
   data() {
     return {
+      name: '',
+      email: '',
+      session_length: 'unknown',
+      session_title: '',
+      session_summary: '',
       lengthOptions: [
         {
           value: 'unknown',
@@ -89,6 +119,30 @@ export default {
           label: 'Workshop - 2+ hours'
         }
       ]
+    }
+  },
+  methods: {
+    async onSubmit() {
+      const {
+        name,
+        email,
+        session_length,
+        session_title,
+        session_summary
+      } = this
+
+      await fetch('/.netlify/functions/submitCFP', {
+        method: 'POST',
+        body: JSON.stringify({
+          name,
+          email,
+          session_length,
+          session_title,
+          session_summary
+        })
+      })
+
+      alert('Thanks for your submission! We will reach out to you shortly.')
     }
   }
 }
