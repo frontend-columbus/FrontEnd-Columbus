@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 
-exports.handler = function (event, context, callback) {
+exports.handler = function (event) {
   const discordID = process.env.discordID;
   const discordTOKEN = process.env.discordTOKEN;
 
@@ -15,8 +15,8 @@ exports.handler = function (event, context, callback) {
     Here is a summary of the talk: "${session_summary}"
   `)
 
-  callback(null, {
+  return {
     statusCode: 200,
     body: ''
-  })
+  }
 }
