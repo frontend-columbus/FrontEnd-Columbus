@@ -7,6 +7,8 @@ export default {
   head: {
     title: 'Front End Columbus',
     meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Columbus based Front End development community, meetup and more.' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: 'https://frontendcolumbus.com' },
