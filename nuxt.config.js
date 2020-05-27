@@ -5,11 +5,19 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Front End Columbus',
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'Columbus based Front End development community, meetup and more.' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://frontendcolumbus.com' },
+      { hid: 'og:title', property: 'og:title', content: 'Front End Columbus' },
+      { hid: 'og:description', property: 'og:description', content: 'Columbus based Front End development community, meetup and more.' },
+      { hid: 'og:image', property: 'og:image', content: 'https://frontendcolumbus.com/metaimage.png' },
+      { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitter:url', property: 'twitter:url', content: 'https://frontendcolumbus.com' },
+      { hid: 'twitter:title', property: 'twitter:title', content: 'Front End Columbus' },
+      { hid: 'twitter:description', property: 'twitter:description', content: 'Columbus based Front End development community, meetup and more.' },
+      { hid: 'twitter:image', property: 'twitter:image', content: 'https://frontendcolumbus.com/metaimage.png' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -43,7 +51,7 @@ export default {
     '@nuxt/content'
   ],
   generate: {
-    async routes () {
+    async routes() {
       const { $content } = require('@nuxt/content')
       const files = await $content().only(['path']).fetch()
 
@@ -57,7 +65,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
     }
   }
 }
