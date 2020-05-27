@@ -31,11 +31,11 @@ export default {
           subheader: 'upcoming events',
           link: '/events'
         },
-        {
-          header: '-',
-          subheader: 'community job postings',
-          link: '/jobs'
-        },
+        // {
+        //   header: '-',
+        //   subheader: 'community job postings',
+        //   link: '/jobs'
+        // },
         {
           header: '4',
           subheader: 'members in discord',
@@ -50,7 +50,7 @@ export default {
   },
   mounted() {
     this.setEventsCount()
-    this.setJobPostingsCount()
+    // this.setJobPostingsCount()
   },
   methods: {
     async setEventsCount() {
