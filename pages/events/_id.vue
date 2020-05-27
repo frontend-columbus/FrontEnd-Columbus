@@ -55,6 +55,9 @@ export default {
   -webkit-text-fill-color: transparent;
 }
 .nuxt-content p {
-  @apply text-lg font-medium leading-loose text-gray-600 ;
+  @apply text-base font-medium leading-relaxed text-gray-700 my-1;
+}
+.nuxt-content hr {
+  @apply my-6;
 }
 </style>

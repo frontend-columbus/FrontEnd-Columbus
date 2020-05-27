@@ -51,7 +51,20 @@ export default {
   },
   head() {
     return {
-      title: 'Front End Columbus'
+      title: 'Front End Columbus',
+        meta: [
+        { hid: 'description', name: 'description', content: 'Columbus based Front End development community, meetup and more.' },
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        { hid: 'og:url', property: 'og:url', content: 'https://frontendcolumbus.com' },
+        { hid: 'og:title', property: 'og:title', content: 'Front End Columbus' },
+        { hid: 'og:description', property: 'og:description', content: 'Columbus based Front End development community, meetup and more.' },
+        { hid: 'og:image', property: 'og:image', content: 'https://frontendcolumbus.com/metaimage.png' },
+        { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
+        { hid: 'twitter:url', property: 'twitter:url', content: 'https://frontendcolumbus.com' },
+        { hid: 'twitter:title', property: 'twitter:title', content: 'Front End Columbus' },
+        { hid: 'twitter:description', property: 'twitter:description', content: 'Columbus based Front End development community, meetup and more.' },
+        { hid: 'twitter:image', property: 'twitter:image', content: 'https://frontendcolumbus.com/metaimage.png' },
+      ]
     }
   },
   methods: {
