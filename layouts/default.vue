@@ -6,7 +6,8 @@
         <li
           v-for="link in navigation"
           :key="link"
-          :class="`whitespace-no-wrap text-lg pb-1 font-semibold text-gray-700 hover:text-primary mx-4 lowercase  ${isCurrent(link.view) && 'md:border-b-2 md:border-primary text-primary'}`"
+          style="white-space: nowrap;"
+          :class="`inline-block whitespace-no-wrap text-lg pb-1 font-semibold text-gray-700 hover:text-primary mx-4 lowercase  ${isCurrent(link.view) && 'md:border-b-2 md:border-primary text-primary'}`"
         >
           <nuxt-link :to="link.href">{{ link.label }}</nuxt-link>
         </li>
