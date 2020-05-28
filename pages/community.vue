@@ -32,7 +32,6 @@
 h1 {
   background: linear-gradient(114.63deg, #A35F3E 47.46%, #C17E5C 76.87%);
   background-clip: text;
-  display: inline;
   -webkit-text-fill-color: transparent;
 }
 

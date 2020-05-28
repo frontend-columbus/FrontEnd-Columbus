@@ -7,7 +7,7 @@
     >
       <nuxt-link :to="link">
         <span
-          class="absolute top-0 right-0 pt-2 pr-2 text-primary"
+          class="absolute top-0 right-0 pt-2 pr-2 text-primaryIcon"
           v-html="feather.icons['arrow-right'].toSvg({ 'stroke-width': '4px', width: '30px', height: '30px'})"
         />
         <span class="block font-extrabold text-6xl text-gray-800" v-if="header">{{ header }}</span>
