@@ -3,7 +3,7 @@
     <section>
       <header class="pb-4">
         <h1
-          class="font-extrabold text-2xl max-w-lg"
+          class="font-extrabold text-2xl max-w-lg text-gray-800"
         >We're on Discord!</h1>
       </header>
       <main>
@@ -29,12 +29,6 @@
 </template>
 
 <style lang="postcss">
-h1 {
-  background: linear-gradient(114.63deg, #A35F3E 47.46%, #C17E5C 76.87%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 iframe {
   width: 100%;
 }

@@ -31,7 +31,7 @@ export default {
 
 <style lang="postcss" scoped>
 h1 {
-  background: linear-gradient(114.63deg, #A35F3E 47.46%, #C17E5C 76.87%);
+  background: linear-gradient(115deg, #BB5000 15%, #E8751F 60%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

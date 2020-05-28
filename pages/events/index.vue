@@ -2,7 +2,7 @@
   <div class="py-2 md:py-2">
     <section>
       <header class="pb-4">
-        <h1 class="font-extrabold text-2xl">Events</h1>
+        <h1 class="font-extrabold text-2xl text-gray-800">Events</h1>
       </header>
       <main class="grid grid-cols-1 gap-6" style="grid-auto-rows: 1fr;">
         <event
@@ -46,11 +46,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-h1 {
-  background: linear-gradient(114.63deg, #A35F3E 47.46%, #C17E5C 76.87%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-</style>

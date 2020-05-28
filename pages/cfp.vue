@@ -2,7 +2,7 @@
   <div class="py-2 md:py-2">
     <section>
       <header class="pb-4">
-        <h1 class="font-extrabold text-2xl">We're always looking for speakers!</h1>
+        <h1 class="font-extrabold text-2xl text-gray-800">We're always looking for speakers!</h1>
       </header>
       <main class="max-w-2xl">
         <p
