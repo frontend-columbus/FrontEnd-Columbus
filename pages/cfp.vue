@@ -4,7 +4,7 @@
       <header class="pb-4">
         <h1 class="font-extrabold text-2xl">We're always looking for speakers!</h1>
       </header>
-      <article class="max-w-2xl">
+      <main class="max-w-2xl">
         <p
           class="text-lg font-medium leading-relaxed text-gray-700 tracking-wide pb-6"
         >Front End Columbus is a welcoming, no pressure community composed of front end developers, designers and tech enthusiasts around the county.</p>
@@ -83,7 +83,7 @@
             </div>
           </form>
         </div>
-      </article>
+      </main>
     </section>
   </div>
 </template>

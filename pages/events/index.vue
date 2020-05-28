@@ -4,13 +4,13 @@
       <header class="pb-4">
         <h1 class="font-extrabold text-2xl">Events</h1>
       </header>
-      <div class="grid grid-cols-1 gap-6" style="grid-auto-rows: 1fr;">
+      <main class="grid grid-cols-1 gap-6" style="grid-auto-rows: 1fr;">
         <event
           v-for="event in events"
           v-bind="event"
           :key="event.datetime.toString()"
         />
-      </div>
+      </main>
     </section>
   </div>
 </template>
@@ -49,7 +49,7 @@ export default {
 
 <style scoped>
 h1 {
-  background: linear-gradient(114.63deg, #B56B45 47.46%, #C17E5C 76.87%);
+  background: linear-gradient(114.63deg, #A35F3E 47.46%, #C17E5C 76.87%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

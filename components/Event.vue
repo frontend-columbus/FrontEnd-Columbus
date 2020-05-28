@@ -2,7 +2,7 @@
   <article :class="`${isUpcoming ? 'border-4 border-secondary' : 'border border-gray-400'} shadow-sm p-6 flex flex-col md:flex-row`">
     <div class="w-full md:w-2/3 flex flex-col justify-center">
       <div class="font-semibold text-blue-900 text-base pb-2 md:pb-0">{{ datetime.toFormat('FF') }}</div>
-      <h3 class="text-xl font-extrabold tracking-wide uppercase pb-2 text-gray-900">{{ title }}</h3>
+      <h2 class="text-xl font-extrabold tracking-wide uppercase pb-2 text-gray-900">{{ title }}</h2>
       <p class="max-w-lg text-base font-medium leading-relaxed text-gray-700 tracking-wide">{{ summary }}</p>
     </div>
     <div class="flex flex-col justify-center items-center md:items-end flex-1 pt-4 md:py-0">

@@ -11,9 +11,9 @@
         >Columbus based Front End development community, meetup and more.</p>
       </div>
     </header>
-    <div class="py-8">
+    <main class="py-8">
       <cta-grid />
-    </div>
+    </main>
   </div>
 </template>
 
@@ -31,7 +31,7 @@ export default {
 
 <style lang="postcss" scoped>
 h1 {
-  background: linear-gradient(114.63deg, #B56B45 47.46%, #C17E5C 76.87%);
+  background: linear-gradient(114.63deg, #A35F3E 47.46%, #C17E5C 76.87%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
