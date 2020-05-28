@@ -50,7 +50,7 @@ export default {
 <style lang="postcss">
 .nuxt-content h1 {
   @apply font-extrabold text-2xl py-4;
-  background: linear-gradient(114.63deg, #ffb99b 47.46%, #ffccb6 76.87%);
+  background: linear-gradient(114.63deg, #B56B45 47.46%, #C17E5C 76.87%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

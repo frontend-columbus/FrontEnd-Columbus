@@ -7,7 +7,7 @@
       >Front End Columbus</h1>
       <div class="py-4">
         <p
-          class="max-w-lg text-center text-lg font-medium leading-relaxed text-gray-600 tracking-wide"
+          class="max-w-lg text-center text-lg font-medium leading-relaxed text-gray-700 tracking-wide"
         >Columbus based Front End development community, meetup and more.</p>
       </div>
     </header>
@@ -31,7 +31,7 @@ export default {
 
 <style lang="postcss" scoped>
 h1 {
-  background: linear-gradient(114.63deg, #ffb99b 47.46%, #ffccb6 76.87%);
+  background: linear-gradient(114.63deg, #B56B45 47.46%, #C17E5C 76.87%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

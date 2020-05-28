@@ -16,7 +16,6 @@
       <div class="w-full flex flex-row justify-center items-center py-12">
         <iframe
           src="https://discordapp.com/widget?id=714103890093801512&theme=dark"
-          width="350"
           height="500"
           allowtransparency="true"
           frameborder="0"
@@ -28,8 +27,13 @@
 
 <style lang="postcss">
 h1 {
-  background: linear-gradient(114.63deg, #ffb99b 47.46%, #ffccb6 76.87%);
+  background: linear-gradient(114.63deg, #B56B45 47.46%, #C17E5C 76.87%);
   background-clip: text;
+  display: inline;
   -webkit-text-fill-color: transparent;
+}
+
+iframe {
+  width: 100%;
 }
 </style>

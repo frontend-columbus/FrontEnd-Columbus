@@ -6,10 +6,10 @@
       </header>
       <article class="max-w-2xl">
         <p
-          class="text-lg font-medium leading-relaxed text-gray-600 tracking-wide pb-6"
+          class="text-lg font-medium leading-relaxed text-gray-700 tracking-wide pb-6"
         >Front End Columbus is a welcoming, no pressure community composed of front end developers, designers and tech enthusiasts around the county.</p>
         <p
-          class="text-lg font-medium leading-relaxed text-gray-600 tracking-wide"
+          class="text-lg font-medium leading-relaxed text-gray-700 tracking-wide"
         >We accept talks of any skill level related to front end development or design. Not sure if your talk is a fit? Reach out to us anyway!</p>
         <div class="py-10">
           <form @submit.prevent="onSubmit" class="max-w-lg">
