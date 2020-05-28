@@ -4,6 +4,7 @@
       <!-- <logo /> -->
       <h1
         class="font-extrabold text-4xl md:text-5xl uppercase tracking-wider text-center"
+        :style="{ background: `linear-gradient(115deg, ${colors.primary} 15%, ${colors.primaryIcon} 60%)` }"
       >Front End Columbus</h1>
       <div class="py-4">
         <p
@@ -20,19 +21,24 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import CtaGrid from '~/components/CTAGrid.vue'
+import { theme } from '~/tailwind.config.js'
 
 export default {
   components: {
     Logo,
     CtaGrid
+  },
+  data() {
+    return {
+      colors: theme.extend.colors
+    }
   }
 }
 </script>
 
 <style lang="postcss" scoped>
 h1 {
-  background: linear-gradient(115deg, #BB5000 15%, #E8751F 60%);
-  background-clip: text;
+  background-clip: text !important;
   -webkit-text-fill-color: transparent;
 }
 </style>
