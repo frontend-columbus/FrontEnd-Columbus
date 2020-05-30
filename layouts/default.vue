@@ -7,9 +7,10 @@
           v-for="link in navigation"
           :key="link"
           style="white-space: nowrap;"
-          :class="`inline-block whitespace-no-wrap text-lg pb-1 font-semibold text-gray-900 hover:text-primary mx-4 lowercase  ${isCurrent(link.view) && 'md:border-b-2 md:border-secondary text-primary'}`"
+          :class="`group relative inline-block whitespace-no-wrap text-base pb-1 text-primary-darker hover:text-primary mx-4 lowercase  ${isCurrent(link.view) && 'font-bold'}`"
         >
-          <nuxt-link :to="link.href">{{ link.label }}</nuxt-link>
+          <div :class="`${!isCurrent(link.view) && 'invisible'} group-hover:visible absolute w-full h-2 bottom-0 mb-1 z-10 bg-secondary`"/>
+          <nuxt-link :to="link.href" class="z-20 relative">{{ link.label }}</nuxt-link>
         </li>
       </ul>
     </nav>
