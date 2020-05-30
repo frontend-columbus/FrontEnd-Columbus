@@ -18,10 +18,12 @@
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "@babel/runtime-corejs3": "^7.10.1",
     "@nuxtjs/tailwindcss": "^1.0.0",
+    "core-js": "^3.6.5",
+    "discord.js": "^12.2.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1",
-    "discord.js": "^12.2.0"
+    "prettier": "^1.19.1"
   }
 }
