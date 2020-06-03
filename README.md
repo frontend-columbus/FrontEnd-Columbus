@@ -3,7 +3,7 @@
 
 > Hey there! This is the website for the Columbus based Front End developer community. 
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4a903690-26a3-4ecf-85d8-0373b834a931/deploy-status)](https://app.netlify.com/sites/nifty-pare-29e1ff/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6c7abc01-9d57-48f3-bceb-07d7cab601b3/deploy-status)](https://app.netlify.com/sites/frontendcolumbus/deploys)
 
 ## V1 To-Do
 - [x] Homepage
