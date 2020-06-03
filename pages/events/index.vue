@@ -2,27 +2,28 @@
   <div class="py-2 md:py-2">
     <section>
       <header class="pb-4">
-        <h1 class="font-extrabold text-2xl text-gray-800">Events</h1>
+        <page-header>Events</page-header>
       </header>
-      <main class="grid grid-cols-1 gap-6" style="grid-auto-rows: 1fr;">
-        <event
-          v-for="event in events"
-          v-bind="event"
-          :key="event.datetime.toString()"
-        />
+      <main>
+        <div v-for="event in events" :key="event.datetime.toString()">
+          <event v-bind="event" />
+          <hr />
+        </div>
       </main>
     </section>
   </div>
 </template>
 
 <script>
-import Event from "~/components/Event"
-
 import { DateTime } from 'luxon'
+
+import Event from '~/components/Event.vue'
+import PageHeader from '~/components/PageHeader.vue'
 
 export default {
   components: {
-    Event
+    Event,
+    PageHeader
   },
   async asyncData({ $content }) {
     let events = await $content('events')

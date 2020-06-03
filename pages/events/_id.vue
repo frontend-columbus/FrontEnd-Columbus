@@ -1,38 +1,47 @@
 <template>
   <div class="py-2 md:py-2">
-    <div class="flex flex-col md:flex-row items-center max-w-full pb-4">
-      <nuxt-link
-        to="/events"
-        class="font-semibold text-gray-700 py-1 md:mr-12 hover:text-primary flex flex-row items-center my-2 md:my-0"
-      >
-        <span v-html="feather.icons['arrow-left'].toSvg()" class="mr-2" />
-        Back
-      </nuxt-link>
-      <a
-        v-if="content.recording"
-        :href="content.recording"
-        class="font-semibold border border-primary text-primary px-4 py-1 md:mr-4 hover:shadow my-2 md:my-0"
-      >Watch Recording</a>
-      <a
-        v-if="content.rsvp"
-        :href="content.rsvp"
-        class="font-semibold bg-primary text-white px-4 py-1 md:mr-4 hover:shadow my-2 md:my-0"
-      >RSVP</a>
-    </div>
-    <section class="max-w-3xl">
-      <nuxt-content :document="content" />
+    <section>
+      <header class="pb-4">
+        <page-header>{{ content.title }}</page-header>
+        <div class="flex flex-col md:flex-row py-6">
+          <div class="my-2 md:my-0 md:mr-4">
+          <secondary-action :full="true" to="/events">
+            <span v-html="feather.icons['arrow-left-circle'].toSvg()" class="mr-2" />
+            <span>Back to events</span>
+          </secondary-action>
+          </div>
+          <div class="my-2 md:my-0 md:mx-4" v-if="content.rsvp">
+            <primary-action :full="true" :href="content.rsvp">RSVP on MeetUp</primary-action>
+          </div>
+          <div class="my-2 md:my-0 md:mx-4" v-if="content.recording">
+            <primary-action :full="true" :href="content.recording">View recording</primary-action>
+          </div>
+        </div>
+      </header>
+      <main>
+        <paragraph>
+          <nuxt-content :document="content" />
+        </paragraph>
+      </main>
     </section>
   </div>
 </template>
 
 <script>
 import feather from 'feather-icons'
-
 import { DateTime } from 'luxon'
+
+import PageHeader from '~/components/PageHeader'
+import Paragraph from '~/components/Paragraph'
+import PrimaryAction from '~/components/PrimaryAction'
+import SecondaryAction from '~/components/SecondaryAction'
 
 export default {
   components: {
-    Event
+    PageHeader,
+    Paragraph,
+    PrimaryAction,
+    SecondaryAction
   },
   data() {
     return {
@@ -48,12 +57,6 @@ export default {
 </script>
 
 <style lang="postcss">
-.nuxt-content h1 {
-  @apply font-extrabold text-2xl py-4 text-gray-800;
-}
-.nuxt-content p {
-  @apply text-base font-medium leading-relaxed text-gray-700 my-1;
-}
 .nuxt-content hr {
   @apply my-6;
 }
