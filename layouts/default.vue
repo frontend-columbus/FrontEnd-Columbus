@@ -7,10 +7,14 @@
           v-for="link in navigation"
           :key="link"
           style="white-space: nowrap;"
-          :class="`group relative inline-block whitespace-no-wrap text-lg md:text-base pb-1 text-primary-darker hover:text-primary mx-4 lowercase  ${isCurrent(link.view) && 'font-bold'}`"
+          class="py-4 md:py-0"
         >
-          <div :class="`${!isCurrent(link.view) && 'invisible'} group-hover:visible absolute w-full h-2 bottom-0 mb-1 z-10 bg-secondary`"/>
-          <nuxt-link :to="link.href" class="z-20 relative">{{ link.label }}</nuxt-link>
+          <div
+          :class="`group relative inline-block whitespace-no-wrap text-lg md:text-base pb-1 text-primary-darker hover:text-primary mx-4 lowercase  ${isCurrent(link.view) && 'font-bold'}`"
+          >
+            <div :class="`${!isCurrent(link.view) && 'invisible'} group-hover:visible absolute w-full h-2 bottom-0 mb-1 z-10 bg-secondary`"/>
+            <nuxt-link :to="link.href" class="z-20 relative">{{ link.label }}</nuxt-link>
+          </div>
         </li>
       </ul>
     </nav>
