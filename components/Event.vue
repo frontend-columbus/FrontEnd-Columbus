@@ -1,18 +1,18 @@
 <template>
-  <article :class="`${isUpcoming ? 'border-4 border-primary' : 'border border-gray-400'} shadow-sm p-6 flex flex-col md:flex-row`">
-    <div class="w-full md:w-2/3 flex flex-col justify-center">
-      <div class="font-semibold text-blue-900 text-base pb-2 md:pb-0">{{ datetime.toFormat('FF') }}</div>
-      <h3 class="text-xl font-extrabold tracking-wide uppercase pb-2 text-gray-900">{{ title }}</h3>
-      <p class="max-w-lg text-base font-medium leading-relaxed text-gray-600 tracking-wide">{{ summary }}</p>
-    </div>
-    <div class="flex flex-col justify-center items-center md:items-end flex-1 pt-4 md:py-0">
-      <a v-if="rsvp && isUpcoming" href="#" class="font-semibold border border-primary text-primary px-4 py-1 m-2 hover:shadow">RSVP</a>
-      <a v-if="recording && !isUpcoming" :href="recording" class="font-semibold border border-primary text-primary px-4 py-1 m-2 hover:shadow">Watch Recording</a>
-      <nuxt-link
-        href="#"
-        class="font-semibold bg-primary text-white px-4 py-1 m-2 hover:shadow"
-        :to="`/events/${slug}`"
-      >Learn More</nuxt-link>
+  <article class="pt-6">
+    <page-subtext>{{ datetime.toFormat("FF") }}</page-subtext>
+    <page-header2>{{ title }}</page-header2>
+    <paragraph>{{ summary }}</paragraph>
+    <div class="flex flex-col md:flex-row py-6">
+      <div class="my-2 md:my-0">
+        <primary-action :full="true" :to="`/events/${slug}`">Read more</primary-action>
+      </div>
+      <div class="my-2 md:my-0 md:mx-4" v-if="rsvp">
+        <secondary-action :full="true" :href="rsvp">RSVP on MeetUp</secondary-action>
+      </div>
+      <div class="my-2 md:my-0 md:mx-4" v-if="recording">
+        <secondary-action :full="true" :href="recording">View recording</secondary-action>
+      </div>
     </div>
   </article>
 </template>
@@ -20,7 +20,20 @@
 <script>
 import { DateTime } from 'luxon'
 
+import Paragraph from '~/components/Paragraph.vue'
+import PageHeader2 from '~/components/PageHeader2.vue'
+import PageSubtext from '~/components/PageSubtext.vue'
+import PrimaryAction from '~/components/PrimaryAction.vue'
+import SecondaryAction from '~/components/SecondaryAction.vue'
+
 export default {
+  components: {
+    Paragraph,
+    PageHeader2,
+    PageSubtext,
+    PrimaryAction,
+    SecondaryAction
+  },
   props: {
     title: String,
     datetime: Object,
@@ -37,6 +50,3 @@ export default {
   }
 }
 </script>
-
-<style lang="postcss">
-</style>

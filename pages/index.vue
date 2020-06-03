@@ -4,35 +4,42 @@
       <!-- <logo /> -->
       <h1
         class="font-extrabold text-4xl md:text-5xl uppercase tracking-wider text-center"
+        :style="{ background: `linear-gradient(140deg, ${colors.primary} 0%, ${colors['primary-lighter'] } 100%)` }"
       >Front End Columbus</h1>
-      <div class="py-4">
-        <p
-          class="max-w-lg text-center text-lg font-medium leading-relaxed text-gray-600 tracking-wide"
-        >Columbus based Front End development community, meetup and more.</p>
+      <div class="max-w-lg text-center">
+        <Paragraph>Columbus based Front End development community, meetup and more.</Paragraph>
       </div>
     </header>
-    <div class="py-8">
+    <main class="py-8">
       <cta-grid />
-    </div>
+    </main>
   </div>
 </template>
 
 <script>
+import { theme } from '~/tailwind.config.js'
+
 import Logo from '~/components/Logo.vue'
 import CtaGrid from '~/components/CTAGrid.vue'
+import Paragraph from '~/components/Paragraph.vue'
 
 export default {
   components: {
     Logo,
-    CtaGrid
+    CtaGrid,
+    Paragraph
+  },
+  data() {
+    return {
+      colors: theme.extend.colors
+    }
   }
 }
 </script>
 
 <style lang="postcss" scoped>
 h1 {
-  background: linear-gradient(114.63deg, #ffb99b 47.46%, #ffccb6 76.87%);
-  background-clip: text;
+  background-clip: text !important;
   -webkit-text-fill-color: transparent;
 }
 </style>

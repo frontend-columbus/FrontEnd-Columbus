@@ -2,15 +2,11 @@
   <div class="py-2 md:py-2">
     <section>
       <header class="pb-4">
-        <h1 class="font-extrabold text-2xl">We're always looking for speakers!</h1>
+        <page-header>We're always looking for speakers!</page-header>
       </header>
-      <article class="max-w-2xl">
-        <p
-          class="text-lg font-medium leading-relaxed text-gray-600 tracking-wide pb-6"
-        >Front End Columbus is a welcoming, no pressure community composed of front end developers, designers and tech enthusiasts around the county.</p>
-        <p
-          class="text-lg font-medium leading-relaxed text-gray-600 tracking-wide"
-        >We accept talks of any skill level related to front end development or design. Not sure if your talk is a fit? Reach out to us anyway!</p>
+      <main class="max-w-2xl">
+        <paragraph>Front End Columbus is a welcoming, no pressure community composed of front end developers, designers and tech enthusiasts around the county.</paragraph>
+        <paragraph>We accept talks of any skill level related to front end development or design. Not sure if your talk is a fit? Reach out to us anyway!</paragraph>
         <div class="py-10">
           <form @submit.prevent="onSubmit" class="max-w-lg">
             <p class="py-2">
@@ -76,20 +72,26 @@
               </label>
             </p>
             <div class="py-2">
-              <button
-                class="font-semibold bg-primary text-white px-4 py-1 hover:shadow"
-                type="submit"
-              >Submit</button>
+              <primary-action type="submit">Submit</primary-action>
             </div>
           </form>
         </div>
-      </article>
+      </main>
     </section>
   </div>
 </template>
 
 <script>
+import Paragraph from '~/components/Paragraph'
+import PageHeader from '~/components/PageHeader'
+import PrimaryAction from '~/components/PrimaryAction'
+
 export default {
+  components: {
+    Paragraph,
+    PageHeader,
+    PrimaryAction
+  },
   data() {
     return {
       name: '',
