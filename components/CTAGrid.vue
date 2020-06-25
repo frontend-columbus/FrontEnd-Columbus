@@ -44,7 +44,7 @@ export default {
         //   link: '/jobs'
         // },
         {
-          header: '5',
+          header: '6',
           subheader: 'members in discord',
           link: '/community'
         },
