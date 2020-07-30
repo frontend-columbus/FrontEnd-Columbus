@@ -4,10 +4,17 @@
       <!-- <logo /> -->
       <h1
         class="font-extrabold text-4xl md:text-5xl uppercase tracking-wider text-center"
-        :style="{ background: `linear-gradient(140deg, ${colors.primary} 0%, ${colors['primary-lighter'] } 100%)` }"
-      >Front End Columbus</h1>
+        :style="{
+          background: `linear-gradient(140deg, ${colors.primary} 0%, ${colors['primary-lighter']} 100%)`
+        }"
+      >
+        Front End Columbus
+      </h1>
       <div class="max-w-lg text-center">
-        <Paragraph>Columbus based Front End development community, meetup and more.</Paragraph>
+        <Paragraph
+          >Columbus based Front End development community, meetup and
+          more.</Paragraph
+        >
       </div>
     </header>
     <main class="py-8">

@@ -32,6 +32,7 @@ import feather from 'feather-icons'
 import { DateTime } from 'luxon'
 
 import PageHeader from '~/components/PageHeader'
+import PageHeader2 from '~/components/PageHeader2'
 import Paragraph from '~/components/Paragraph'
 import PrimaryAction from '~/components/PrimaryAction'
 import SecondaryAction from '~/components/SecondaryAction'
@@ -39,6 +40,7 @@ import SecondaryAction from '~/components/SecondaryAction'
 export default {
   components: {
     PageHeader,
+    PageHeader2,
     Paragraph,
     PrimaryAction,
     SecondaryAction
@@ -59,5 +61,15 @@ export default {
 <style lang="postcss">
 .nuxt-content hr {
   @apply my-6;
+}
+.nuxt-content li::before {
+  content: '';
+  border-radius: 100px;
+  @apply bg-primary inline-block mr-3;
+  height: 12px;
+  width: 12px;
+}
+.nuxt-content li {
+  @apply pl-2 py-3 block;
 }
 </style>
