@@ -1,8 +1,8 @@
 ---
 title: PHP Software Engineer - PriceSpider
 datetime: 2020-07-30 08:00
-categories: remote, php, full-stack
-apply_url: https://boards.greenhouse.io/pricespider/jobs/4658932002
+categories: remote, php, full-stack, react
+apply_url: https://grnh.se/4bbfbd782us
 member_employees: Eric Katz
 ---
 <page-header2>
