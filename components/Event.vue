@@ -1,6 +1,6 @@
 <template>
   <article class="pt-6">
-    <page-subtext>{{ datetime.toFormat("FF") }}</page-subtext>
+    <page-subtext>{{ datetime.toFormat("ff") }}</page-subtext>
     <page-header2>{{ title }}</page-header2>
     <paragraph>{{ summary }}</paragraph>
     <div class="flex flex-col md:flex-row py-6">
