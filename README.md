@@ -10,8 +10,8 @@
 - [x] Dynamic homepage CTAs
 - [x] Event listing page
 - [x] Event details page
-- [ ] Job post list
-- [ ] Job details page
+- [X] Job post list
+- [X] Job details page
 - [x] Discord signup link
 - [x] CFP form
 - [ ] PR documentation and templates for job postings & events
