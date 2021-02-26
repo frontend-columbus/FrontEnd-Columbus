@@ -1,6 +1,6 @@
 
 export default {
-  ssr: 'false',
+  ssr: false,
   target: 'static',
   cache: false,
   /*
