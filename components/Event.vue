@@ -1,7 +1,7 @@
 <template>
   <article class="pt-6">
     <page-subtext v-if="datetime != null">{{
-      datetime.toFormat('ff')
+      formattedDateTime
     }}</page-subtext>
     <page-header2>{{ title }}</page-header2>
     <paragraph>{{ summary }}</paragraph>
@@ -44,7 +44,7 @@ export default {
   },
   props: {
     title: String,
-    datetime: Object,
+    datetime: String,
     summary: String,
     rsvp: String,
     recording: String,
@@ -54,6 +54,9 @@ export default {
     isUpcoming() {
       const now = DateTime.local()
       return this.datetime > now
+    },
+    formattedDateTime () {
+      return DateTime.fromFormat(this.datetime, 'y-M-d T').toFormat('ff')
     }
   }
 }

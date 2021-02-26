@@ -30,16 +30,7 @@ export default {
       .only(['slug', 'title', 'datetime', 'summary', 'rsvp', 'recording'])
       .fetch()
 
-    events = events
-      .map(event => {
-        const datetime = DateTime.fromFormat(event.datetime, 'y-M-d T')
-
-        return {
-          ...event,
-          datetime
-        }
-      })
-      .sort((a, b) => b.datetime - a.datetime)
+    events.sort((a, b) => b.datetime - a.datetime)
 
     return {
       events

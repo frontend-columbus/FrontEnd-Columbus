@@ -58,16 +58,7 @@ export default {
       ])
       .fetch()
 
-    jobs = jobs
-      .map(event => {
-        const datetime = DateTime.fromFormat(event.datetime, 'y-M-d T')
-
-        return {
-          ...event,
-          datetime
-        }
-      })
-      .sort((a, b) => b.datetime - a.datetime)
+    jobs.sort((a, b) => b.datetime - a.datetime)
 
     return {
       jobs

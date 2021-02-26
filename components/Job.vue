@@ -45,7 +45,7 @@ export default {
   },
   computed: {
     timeDiff() {
-      return Math.round(DateTime.local().diff(this.datetime, ['days']).days)
+      return Math.round(DateTime.local().diff(DateTime.fromFormat(this.datetime, 'y-M-d T'), ['days']).days)
     },
     memberEmployees() {
       return this.member_employees?.split(',') ?? []
