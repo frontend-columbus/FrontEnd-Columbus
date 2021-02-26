@@ -5,9 +5,17 @@
         <page-header>Jobs</page-header>
         <p>
           <label>
-            <select v-model="filter" class="px-3 py-1 text-lg border border-gray-600 capitalize">
+            <select
+              v-model="filter"
+              class="px-3 py-1 text-lg border border-gray-600 capitalize"
+            >
               <option value="all">All Categories</option>
-              <option v-for="category in categories" :value="category" :key="category">{{ category }}</option>
+              <option
+                v-for="category in categories"
+                :value="category"
+                :key="category"
+                >{{ category }}</option
+              >
             </select>
           </label>
         </p>
@@ -40,12 +48,19 @@ export default {
   },
   async asyncData({ $content }) {
     let jobs = await $content('jobs')
-      .only(['slug', 'title', 'datetime', 'categories', 'apply_url', 'member_employees'])
+      .only([
+        'slug',
+        'title',
+        'datetime',
+        'categories',
+        'apply_url',
+        'member_employees'
+      ])
       .fetch()
 
     jobs = jobs
       .map(event => {
-        const datetime = new DateTime.fromString(event.datetime, 'y-M-d T')
+        const datetime = DateTime.fromFormat(event.datetime, 'y-M-d T')
 
         return {
           ...event,
@@ -72,10 +87,7 @@ export default {
     filteredResults() {
       if (!this.jobs?.length) return []
       if (this.filter === 'all') return this.jobs
-      else
-        return this.jobs.filter(job => 
-          job.categories.includes(this.filter)
-        )
+      else return this.jobs.filter(job => job.categories.includes(this.filter))
     }
   }
 }

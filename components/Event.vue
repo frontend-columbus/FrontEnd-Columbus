@@ -1,17 +1,25 @@
 <template>
   <article class="pt-6">
-    <page-subtext>{{ datetime.toFormat("ff") }}</page-subtext>
+    <page-subtext v-if="datetime != null">{{
+      datetime.toFormat('ff')
+    }}</page-subtext>
     <page-header2>{{ title }}</page-header2>
     <paragraph>{{ summary }}</paragraph>
     <div class="flex flex-col md:flex-row py-6">
       <div class="my-2 md:my-0">
-        <primary-action :full="true" :to="`/events/${slug}`">Read more</primary-action>
+        <primary-action :full="true" :to="`/events/${slug}`"
+          >Read more</primary-action
+        >
       </div>
       <div class="my-2 md:my-0 md:mx-4" v-if="rsvp">
-        <secondary-action :full="true" :href="rsvp">RSVP on MeetUp</secondary-action>
+        <secondary-action :full="true" :href="rsvp"
+          >RSVP on MeetUp</secondary-action
+        >
       </div>
       <div class="my-2 md:my-0 md:mx-4" v-if="recording">
-        <secondary-action :full="true" :href="recording">View recording</secondary-action>
+        <secondary-action :full="true" :href="recording"
+          >View recording</secondary-action
+        >
       </div>
     </div>
   </article>

@@ -32,7 +32,7 @@ export default {
 
     events = events
       .map(event => {
-        const datetime = new DateTime.fromString(event.datetime, 'y-M-d T')
+        const datetime = DateTime.fromFormat(event.datetime, 'y-M-d T')
 
         return {
           ...event,

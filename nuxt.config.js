@@ -2,6 +2,7 @@
 export default {
   ssr: 'false',
   target: 'static',
+  cache: false,
   /*
   ** Headers of the page
   */
