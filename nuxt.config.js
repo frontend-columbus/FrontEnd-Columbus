@@ -5,7 +5,7 @@ export default {
   ** Headers of the page
   */
   generate: {
-    routes: ['/events/2020-05-21', '/events/2020-06-25', '/events/2020-07-30', '/events/2020-08-13', '/events/2020-08-27', '/events/2021-02-25']
+    routes: ['/events/2020-05-21', '/events/2020-06-25', '/events/2020-07-30', '/events/2020-08-13', '/events/2020-08-27', '/events/2021-02-25', 'events/2021-08-08']
   },
   head: {
     title: 'Front End Columbus',
