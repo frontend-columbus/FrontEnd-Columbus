@@ -3,7 +3,7 @@ title: UX Engineer - Insight
 datetime: 2020-07-30 08:00
 categories: columbus, frontend, react, angular
 apply_url: https://jobsearch.insight.com/search/?createNewAlert=false&q=&locationsearch=Columbus
-member_employees: Alex White,Marko Skugor,Kevin McCartney
+member_employees: Marko Skugor,Kevin McCartney
 ---
 <page-header2>
 Overview:
