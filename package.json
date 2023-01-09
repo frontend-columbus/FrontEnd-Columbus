@@ -14,7 +14,7 @@
     "@nuxt/content": "^1.13.1",
     "bufferutil": "^4.0.1",
     "feather-icons": "^4.28.0",
-    "luxon": "^1.26.0",
+    "luxon": "^1.28.1",
     "nuxt": "^2.15.2"
   },
   "devDependencies": {
